@@ -84,7 +84,7 @@ type AtomObj = {
   symbol: string;
 };
 
-function AtomicPreodicTable({ periodicTableData }: PropTypes) {
+function AtomicPeriodicTable({ periodicTableData }: PropTypes) {
   const [atomInfos, setAtomInfos] = useState<ElementsEntity[]>([]);
   useEffect(() => {
     setAtomInfos(periodicTableData);
@@ -151,4 +151,4 @@ function AtomicPreodicTable({ periodicTableData }: PropTypes) {
   );
 }
 
-export default AtomicPreodicTable;
+export default AtomicPeriodicTable;

@@ -1,6 +1,6 @@
 import { storiesOf } from "@storybook/react";
 import HomeTemplate from ".";
-import AtomicPreodicTable from "../../organisms/AtomicPreodicTable";
+import AtomicPreodicTable from "../../organisms/AtomicPeriodicTable";
 import Header from "../../organisms/Header";
 import PreodicTableData from "../../../data/periodic-table.json";
 
