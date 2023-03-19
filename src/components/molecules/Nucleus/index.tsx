@@ -3,6 +3,10 @@ import theme from "../../../styles/theme";
 import Span from "../../atoms/Span";
 
 const Wrap = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 120px;
   height: 120px;
   border-radius: 50%;

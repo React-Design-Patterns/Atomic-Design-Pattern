@@ -3,27 +3,24 @@ import styled from "styled-components";
 import theme from "../../../styles/theme";
 
 const Orbit = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 50%;
   border: 2px solid ${theme.color.gray};
 `;
 
-type Keys =
-  | "1stOrbit"
-  | "2ndOrbit"
-  | "3rdOrbit"
-  | "4thOrbit"
-  | "5thOrbit"
-  | "6thOrbit"
-  | "7thOrbit";
+type Keys = 1 | 2 | 3 | 4 | 5 | 6 | 7;
 
 const Size: { [key in Keys]: number } = {
-  "1stOrbit": 200,
-  "2ndOrbit": 260,
-  "3rdOrbit": 320,
-  "4thOrbit": 380,
-  "5thOrbit": 440,
-  "6thOrbit": 500,
-  "7thOrbit": 560,
+  1: 200,
+  2: 260,
+  3: 320,
+  4: 380,
+  5: 440,
+  6: 500,
+  7: 560,
 };
 
 const Orbital = ({ size, ...props }: { size: Keys }) => {
