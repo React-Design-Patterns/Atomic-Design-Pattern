@@ -55,6 +55,7 @@ function AtomicPeriodicTable({ periodicTableData }: PropTypes) {
         atomicWeight={atomObj.atomic_mass}
         atomicNumber={atomObj.number}
         fullName={atomObj.name}
+        key={atomObj.name}
       >
         {atomObj.symbol}
       </Element>
@@ -62,7 +63,9 @@ function AtomicPeriodicTable({ periodicTableData }: PropTypes) {
   };
 
   const getEmptyElement = (number: number) => {
-    return new Array(number).fill(0).map(() => <EmptyElement />);
+    return new Array(number)
+      .fill(0)
+      .map((_, idx) => <EmptyElement key={idx} />);
   };
 
   return (

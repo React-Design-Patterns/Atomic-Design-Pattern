@@ -41,6 +41,7 @@ const AtomicModel = styled.div``;
 const Description = styled.div`
   width: 412px;
   height: 600px;
+  overflow-y: scroll;
   background-color: ${theme.color.gray};
   padding: 16px 20px;
   color: ${theme.color.white};

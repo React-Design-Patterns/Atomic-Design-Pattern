@@ -20,8 +20,7 @@ function AtomicModel({ symbol, period }: PropTypes) {
     <Wrap>
       <Nucleus>{symbol}</Nucleus>
       {new Array(period).fill(0).map((_, idx) => {
-        // return idx + 1;
-        return <Orbital size={(idx + 1) as Keys} />;
+        return <Orbital size={(idx + 1) as Keys} key={idx} />;
       })}
     </Wrap>
   );
