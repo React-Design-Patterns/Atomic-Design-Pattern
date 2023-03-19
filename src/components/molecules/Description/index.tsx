@@ -5,9 +5,7 @@ import Span from "../../atoms/Span";
 const Wrap = styled.div`
   background-color: ${theme.color.gray};
   padding: 16px 20px;
-  width: 412px;
   text-align: center;
-  box-sizing: border-box;
 `;
 
 type PropTypes = {
