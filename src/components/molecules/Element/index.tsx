@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import theme from "../../../styles/theme";
 import Span from "../../atoms/Span";
@@ -40,18 +41,20 @@ const Element = ({
   isCard = false,
 }: PropTypes) => {
   return (
-    <Wrap isCard={isCard}>
-      <Top>
-        <Span fontSize={isCard ? 28 : 8}>{atomicWeight}</Span>
-        <Span fontSize={isCard ? 28 : 8}>{atomicNumber}</Span>
-      </Top>
-      <Middle>
-        <Span fontSize={isCard ? 100 : 26}>{children}</Span>
-      </Middle>
-      <Bottom>
-        <Span fontSize={isCard ? 28 : 8}>{fullName}</Span>
-      </Bottom>
-    </Wrap>
+    <Link to={`/detail/${atomicNumber}`} style={{ textDecoration: "none" }}>
+      <Wrap isCard={isCard}>
+        <Top>
+          <Span fontSize={isCard ? 28 : 10}>{atomicWeight}</Span>
+          <Span fontSize={isCard ? 28 : 10}>{atomicNumber}</Span>
+        </Top>
+        <Middle>
+          <Span fontSize={isCard ? 100 : 26}>{children}</Span>
+        </Middle>
+        <Bottom>
+          <Span fontSize={isCard ? 28 : 10}>{fullName}</Span>
+        </Bottom>
+      </Wrap>
+    </Link>
   );
 };
 

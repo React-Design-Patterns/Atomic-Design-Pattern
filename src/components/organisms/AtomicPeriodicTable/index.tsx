@@ -52,7 +52,7 @@ function AtomicPeriodicTable({ periodicTableData }: PropTypes) {
   const getElement = ({ from, to }: { from: number; to?: number }) => {
     return atomInfos.slice(from - 1, to ?? from).map((atomObj: AtomObj) => (
       <Element
-        atomicWeight={atomObj.atomic_mass}
+        atomicWeight={+atomObj.atomic_mass.toFixed(3)}
         atomicNumber={atomObj.number}
         fullName={atomObj.name}
         key={atomObj.name}

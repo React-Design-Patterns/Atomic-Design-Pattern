@@ -1,13 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 import Arrow from "./arrow.svg";
 
-const styles = css`
+const Image = styled.img`
   width: 38px;
 `;
 
-const Back = styled(() => React.createElement("img", { src: Arrow }))`
-  ${styles}
-`;
+function Back() {
+  return (
+    <Link to="/">
+      <Image src={Arrow} />
+    </Link>
+  );
+}
 
 export default Back;

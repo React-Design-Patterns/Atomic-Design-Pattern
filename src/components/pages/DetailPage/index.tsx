@@ -17,13 +17,14 @@ function DetailPage() {
 
   const [atomInfo, setAtomInfo] = useState<ElementsEntity | null>(null);
 
-  const { data: description, isLoading } = useQuery(
+  const { data: description } = useQuery(
     "description",
     async () => await getAtomDescription(id),
     {
       refetchOnWindowFocus: false,
     }
   );
+  console.log(description);
 
   useEffect(() => {
     if (!id || typeof id !== "number") return;
@@ -32,23 +33,23 @@ function DetailPage() {
 
   return atomInfo ? (
     <DetailTemplate
-      header={<Header>Hydrogen</Header>}
+      header={<Header>{atomInfo.name}</Header>}
       back={<Back />}
       element={
         <Element
           atomicNumber={id}
-          atomicWeight={atomInfo.atomic_mass}
+          atomicWeight={+atomInfo.atomic_mass.toFixed(3)}
           fullName={atomInfo.name}
           isCard
         >
-          H
+          {atomInfo.symbol}
         </Element>
       }
       atomicModel={
         <AtomicModel symbol={atomInfo.symbol} period={atomInfo.period} />
       }
       description={
-        <Description>{isLoading ? "" : description ?? ""}</Description>
+        <Description>{description ? description ?? "" : ""}</Description>
       }
     />
   ) : null;
