@@ -6,7 +6,7 @@ import PreodicTableData from "../../../data/periodic-table.json";
 
 storiesOf("HomeTemplate", module).add("default", () => (
   <HomeTemplate
-    header={<Header />}
+    header={<Header>Atomic Periodic Table</Header>}
     section={
       <AtomicPreodicTable periodicTableData={PreodicTableData.elements} />
     }

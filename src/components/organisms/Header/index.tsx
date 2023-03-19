@@ -12,10 +12,14 @@ const Wrap = styled.div`
   background-color: ${theme.color.gray};
 `;
 
-function Header() {
+type PropTypes = {
+  children: string;
+};
+
+function Header({ children }: PropTypes) {
   return (
     <Wrap>
-      <Logo>Atomic Periodic Table</Logo>
+      <Logo>{children}</Logo>
     </Wrap>
   );
 }

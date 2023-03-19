@@ -9,7 +9,7 @@ import Header from "../../organisms/Header";
 storiesOf("DetailTemplate", module)
   .add("Hydrogen", () => (
     <DetailTemplate
-      header={<Header />}
+      header={<Header>Hydrogen</Header>}
       back={<Back />}
       element={
         <Element
@@ -41,7 +41,7 @@ storiesOf("DetailTemplate", module)
   ))
   .add("Oganesson", () => (
     <DetailTemplate
-      header={<Header />}
+      header={<Header>Oganesson</Header>}
       back={<Back />}
       element={
         <Element
