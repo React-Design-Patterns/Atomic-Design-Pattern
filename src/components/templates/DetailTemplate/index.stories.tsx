@@ -21,7 +21,7 @@ storiesOf("DetailTemplate", module)
           H
         </Element>
       }
-      atomicModel={<AtomicModel symbol="H" level={1} />}
+      atomicModel={<AtomicModel symbol="H" period={1} />}
       description={
         <Description>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est eos
@@ -53,7 +53,7 @@ storiesOf("DetailTemplate", module)
           Og
         </Element>
       }
-      atomicModel={<AtomicModel symbol="Og" level={7} />}
+      atomicModel={<AtomicModel symbol="Og" period={7} />}
       description={
         <Description>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est eos

@@ -10,16 +10,16 @@ const Wrap = styled.div`
 
 type PropTypes = {
   symbol: string;
-  level: number;
+  period: number;
 };
 
 type Keys = 1 | 2 | 3 | 4 | 5 | 6 | 7;
 
-function AtomicModel({ symbol, level }: PropTypes) {
+function AtomicModel({ symbol, period }: PropTypes) {
   return (
     <Wrap>
       <Nucleus>{symbol}</Nucleus>
-      {new Array(level).fill(0).map((_, idx) => {
+      {new Array(period).fill(0).map((_, idx) => {
         // return idx + 1;
         return <Orbital size={(idx + 1) as Keys} />;
       })}

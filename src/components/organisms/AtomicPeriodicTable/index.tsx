@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
+import { ElementsEntity } from "../../../types/ElementsEntity.type";
 import EmptyElement from "../../atoms/EmptyElement";
 import Element from "../../molecules/Element";
 
@@ -30,48 +31,6 @@ const Wrap = styled.div`
   gap: 32px;
   margin: 0 auto;
 `;
-
-type ElementsEntity = {
-  name: string;
-  appearance?: string | null;
-  atomic_mass: number;
-  boil?: number | null;
-  category: string;
-  density?: number | null;
-  discovered_by?: string | null;
-  melt?: number | null;
-  molar_heat?: number | null;
-  named_by?: string | null;
-  number: number;
-  period: number;
-  group: number;
-  phase: string;
-  source: string;
-  bohr_model_image?: string | null;
-  bohr_model_3d?: string | null;
-  spectral_img?: string | null;
-  summary: string;
-  symbol: string;
-  xpos: number;
-  ypos: number;
-  wxpos: number;
-  wypos: number;
-  shells?: number[] | null;
-  electron_configuration: string;
-  electron_configuration_semantic: string;
-  electron_affinity?: number | null;
-  electronegativity_pauling?: number | null;
-  ionization_energies?: (number | null)[] | null;
-  "cpk-hex"?: string | null;
-  image: Image;
-  block: string;
-};
-
-type Image = {
-  title: string;
-  url: string;
-  attribution: string;
-};
 
 type PropTypes = {
   periodicTableData: ElementsEntity[];
