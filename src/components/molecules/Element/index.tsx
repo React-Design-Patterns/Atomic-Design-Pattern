@@ -26,8 +26,8 @@ const Bottom = styled.div``;
 
 type PropTypes = {
   children: string;
-  atomicWeight: string;
-  atomicNumber: string;
+  atomicWeight: number;
+  atomicNumber: number;
   fullName: string;
   isCard?: boolean;
 };
