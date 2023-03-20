@@ -29,7 +29,7 @@ export type ElementsEntity = {
   ypos: number;
   wxpos: number;
   wypos: number;
-  shells?: number[] | null;
+  shells: number[];
   electron_configuration: string;
   electron_configuration_semantic: string;
   electron_affinity?: number | null;

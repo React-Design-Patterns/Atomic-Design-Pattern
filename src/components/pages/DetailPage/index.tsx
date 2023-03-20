@@ -46,7 +46,11 @@ function DetailPage() {
         </Element>
       }
       atomicModel={
-        <AtomicModel symbol={atomInfo.symbol} period={atomInfo.period} />
+        <AtomicModel
+          shells={atomInfo.shells}
+          symbol={atomInfo.symbol}
+          period={atomInfo.period}
+        />
       }
       description={
         <Description>{description ? description ?? "" : ""}</Description>
