@@ -23,7 +23,7 @@ const Section = styled.section`
   padding: 46px;
   align-items: center;
   justify-items: center;
-  gap: 52px;
+  gap: 22px;
 `;
 
 const Back = styled.div`

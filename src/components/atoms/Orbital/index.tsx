@@ -6,7 +6,7 @@ const Wrap = styled.div<{ speed: number }>`
   position: absolute;
   width: inherit;
   height: inherit;
-  animation: rotate calc(6s + ${({ speed }) => speed}s) linear infinite;
+  animation: rotate calc(3s + ${({ speed }) => speed}s) linear infinite;
   @keyframes rotate {
     0% {
       transform: rotate(0);
@@ -54,7 +54,7 @@ type Position = {
   left: number;
 };
 
-type Keys = 1 | 2 | 3 | 4 | 5 | 6 | 7;
+type Keys = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
 
 const Size: { [key in Keys]: number } = {
   1: 200,
@@ -64,6 +64,7 @@ const Size: { [key in Keys]: number } = {
   5: 440,
   6: 500,
   7: 560,
+  8: 620,
 };
 
 type PropTypes = {

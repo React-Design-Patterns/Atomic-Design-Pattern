@@ -8,4 +8,5 @@ storiesOf("Orbital", module)
   .add("size4", () => <Orbital electrons={5} size={4} />)
   .add("size5", () => <Orbital electrons={5} size={5} />)
   .add("size6", () => <Orbital electrons={5} size={6} />)
-  .add("size7", () => <Orbital electrons={5} size={7} />);
+  .add("size7", () => <Orbital electrons={5} size={7} />)
+  .add("size8", () => <Orbital electrons={5} size={8} />);

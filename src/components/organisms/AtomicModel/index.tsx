@@ -4,8 +4,8 @@ import Nucleus from "../../molecules/Nucleus";
 
 const Wrap = styled.div`
   position: relative;
-  width: 560px;
-  height: 560px;
+  width: 620px;
+  height: 620px;
 `;
 
 type PropTypes = {
